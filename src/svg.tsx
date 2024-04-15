@@ -1,4 +1,5 @@
 import whulogo from "./assets/whu.svg";
+import bytedancelogo from "./assets/ByteDance_logo_English.svg";
 
 export function GithubFillSvg(props: React.SVGProps<SVGSVGElement>) {
     return (
@@ -26,4 +27,10 @@ export function MailLineSvg(props: React.SVGProps<SVGSVGElement>) {
 
 export function WhuLogoSvg(props: React.ImgHTMLAttributes<HTMLImageElement>) {
     return <img src={whulogo} {...props}></img>;
+}
+
+export function BytedanceLogoSvg(
+    props: React.ImgHTMLAttributes<HTMLImageElement>
+) {
+    return <img src={bytedancelogo} {...props}></img>;
 }

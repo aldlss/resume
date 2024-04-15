@@ -1,4 +1,10 @@
-import { GithubFillSvg, LinkSvg, MailLineSvg, WhuLogoSvg } from "./svg";
+import {
+    BytedanceLogoSvg,
+    GithubFillSvg,
+    LinkSvg,
+    MailLineSvg,
+    WhuLogoSvg,
+} from "./svg";
 import { box } from "./box";
 
 export default function App() {
@@ -49,16 +55,34 @@ export default function App() {
                 <h2 className="text-h2">教育经历</h2>
                 <div className="flex justify-between">
                     <h3 className="flex items-center gap-2 text-h3 font-normal">
-                        <WhuLogoSvg className="w-8" />
-                        <span>本科·武汉大学</span>
+                        <WhuLogoSvg className="h-8" />
+                        <span>武汉大学·本科</span>
                     </h3>
                     <span>2021.09 ~ 至今</span>
                 </div>
                 <UnorderedList
                     list={[
-                        "主修专业：计算机科学与技术。GPA: 3.735/4.0。",
+                        "主修专业：计算机科学与技术。GPA: 3.759/4.0。",
                         "科目成绩：离散数学 93/100、数据结构 93/100、计算机网络 93/100、高级语言程序设计 92/100、计算机组成与设计 90/100。",
                         "在校荣誉：乙等奖学金、三好学生、国家励志奖学金、校级社会活动积极分子等。",
+                    ]}
+                />
+            </section>
+            <section>
+                <h2 className="text-h2">工作经历</h2>
+                <div className="flex justify-between">
+                    <h3 className="flex items-center gap-2 text-h3 font-normal">
+                        <div className="h-8 w-8 overflow-clip">
+                            <BytedanceLogoSvg className="h-8 min-w-max" />
+                        </div>
+                        <span>字节跳动·前端开发实习生</span>
+                    </h3>
+                    <span>2024.01 ~ 2024.03</span>
+                </div>
+                <UnorderedList
+                    list={[
+                        "飞书前端开发实习生，业务方向为飞书多维表格业务侧前端的开发。",
+                        "修复安全、体验问题，完善搜索、筛选功能，扩展字段填写方式。",
                     ]}
                 />
             </section>
@@ -119,7 +143,7 @@ export default function App() {
                                 为第五届字节跳动青训营后端项目实践内容，使用微服务架构。
                                 本人在其中负责了社交模块的后端开发，运用了 PgSQL
                                 存储用户私聊信息，并考虑到用户关系的复杂性，使用了图数据库
-                                Neo4j 进行管理 。通过 Hertz
+                                Neo4j 进行管理。通过 Hertz
                                 拦截网络请求后解析数据并验证合法性，然后通过
                                 Kitex 调用相关微服务，相应微服务则通过 Gorm
                                 或相应的驱动操作数据库并返回结果，有效实现了用户关注、私聊等功能。
@@ -142,16 +166,16 @@ export default function App() {
                 <ul className="flex flex-col gap-2">
                     {[
                         [
-                            "第 29 次 CCF 计算机软件能力认证 315 分",
-                            "2023.03",
-                            "排名：前 2.59%。",
-                            "该认证为算法与程序设计能力认证。",
-                        ],
-                        [
                             "2022 CCF CCSP 全国赛铜奖",
                             "2022.12",
                             "",
                             "该认证为程序设计能力认证。",
+                        ],
+                        [
+                            "第 29 次 CCF 计算机软件能力认证 315 分",
+                            "2023.03",
+                            "排名：前 2.59%。",
+                            "该认证为算法与程序设计能力认证。",
                         ],
                         [
                             "蓝桥杯 第十四届 省赛一等奖",
@@ -164,6 +188,12 @@ export default function App() {
                             "2023.04",
                             "个人三等奖，201 分。",
                             "该认证为算法设计能力认证。",
+                        ],
+                        [
+                            "第 33 次 CCF 计算机软件能力认证 430 分",
+                            "2024.03",
+                            "排名：历史前 0.34%。",
+                            "该认证为算法与程序设计能力认证。",
                         ],
                         [
                             "全国大学生数学建模竞赛 省级三等奖",
