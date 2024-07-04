@@ -1,5 +1,6 @@
 import whulogo from "./assets/whu.svg";
 import bytedancelogo from "./assets/ByteDance_logo_English.svg";
+import tencentlogo from "./assets/TencentIconBlue.png";
 
 export function GithubFillSvg(props: React.SVGProps<SVGSVGElement>) {
     return (
@@ -33,4 +34,10 @@ export function BytedanceLogoSvg(
     props: React.ImgHTMLAttributes<HTMLImageElement>
 ) {
     return <img src={bytedancelogo} {...props}></img>;
+}
+
+export function TencentLogoIcon(
+    props: React.ImgHTMLAttributes<HTMLImageElement>
+) {
+    return <img src={tencentlogo} {...props}></img>;
 }

@@ -3,6 +3,7 @@ import {
     GithubFillSvg,
     LinkSvg,
     MailLineSvg,
+    TencentLogoIcon,
     WhuLogoSvg,
 } from "./svg";
 import { box } from "./box";
@@ -13,39 +14,12 @@ export default function App() {
         <main className="m-x-auto h-full max-w-968px flex flex-col gap-2 p-2">
             <main>
                 <h1 className="text-h1">{name}</h1>
-                <address className="w-full flex flex-row gap-4">
-                    <a
-                        href="https://github.com/aldlss"
-                        className="flex flex-row items-center text-link"
-                        target="_blank">
-                        <GithubFillSvg className="w-8" />
-                        <span className="text-p">Github</span>
-                    </a>
-                    <a
-                        href="https://blog.suwako.cn"
-                        className="flex flex-row items-center text-link"
-                        target="_blank">
-                        <LinkSvg className="w-8" />
-                        <span className="text-p">Blog</span>
-                    </a>
-                    <a
-                        href={`mailto:${email}`}
-                        className="m-l-auto flex flex-row items-center text-link"
-                        target="_blank">
-                        <MailLineSvg className="w-8" />
-                        <span className="text-p">{`${email.replace(
-                            "@",
-                            "[at]"
-                        )}`}</span>
-                    </a>
-                </address>
             </main>
             <section>
                 <h2 className="text-h2">自我介绍</h2>
                 <UnorderedList
                     list={[
-                        "熟悉 HTML, CSS, TypeScript，能熟练使用 React, Next.js 进行开发，了解其他前端框架和技术。",
-                        "能使用 C++, Go, Python, C#, Kotlin 编写项目，开发过网页端、服务端、安卓端的项目。",
+                        "熟悉 C++, Python, Typescript 等各类语言的使用和编写，具有较强的编码实现能力。",
                         "掌握 Git 的使用，了解 Linux 常用命令。",
                         "拥有优秀的搜索能力和自我学习能力和基本的计算机科学知识与科学素养，对于新技术的学习热情高。",
                     ]}
@@ -69,20 +43,28 @@ export default function App() {
                 />
             </section>
             <section>
-                <h2 className="text-h2">工作经历</h2>
+                <h2 className="text-h2">科研竞赛</h2>
                 <div className="flex justify-between">
-                    <h3 className="flex items-center gap-2 text-h3 font-normal">
-                        <div className="h-8 w-8 overflow-clip">
-                            <BytedanceLogoSvg className="h-8 min-w-max" />
-                        </div>
-                        <span>字节跳动·前端开发实习生</span>
+                    <h3 className="m-s-4 flex items-center gap-2 text-h3 font-normal">
+                        <span>全国大学生数学建模竞赛</span>
                     </h3>
-                    <span>2024.01 ~ 2024.03</span>
                 </div>
                 <UnorderedList
                     list={[
-                        "飞书前端开发实习生，业务方向为飞书多维表格业务侧前端的开发。",
-                        "修复安全、体验问题，完善搜索、筛选功能，扩展字段填写方式。",
+                        "参与了“多波束测线问题”的研究，在其中主要担任编程实现的角色。",
+                        "使用 Python 语言进行数据读取，实现模型，绘制三维海底地形图以及航线图，并计算最优的测线角度。",
+                        "最终获得了省级三等奖的成绩。",
+                    ]}
+                />
+                <div className="flex justify-between">
+                    <h3 className="m-s-4 flex items-center gap-2 text-h3 font-normal">
+                        <span>校级大创项目</span>
+                    </h3>
+                </div>
+                <UnorderedList
+                    list={[
+                        "主要研究的在单片机上的 AI 模型的推理，以此实现低功耗情况下对于管道的智能识别和病虫害识别。",
+                        "使用该项目参加了计算机设计大赛，取得了省级二等奖的成绩。",
                     ]}
                 />
             </section>
@@ -102,51 +84,28 @@ export default function App() {
                                 </Link>
                             </div>,
                             <p>
-                                为个人所做的听音识曲小游戏。使用 Next.js
-                                框架开发，通过 SSR
-                                加快首屏渲染，并实现了响应式布局，可根据屏幕长宽进行自适应放缩。界面使用
-                                UnoCSS 和 HeadlessUI
-                                库实现，并实现了暗色主题。音乐获取与使用采用了消费者生产者模型，实现音乐的预获取，减少用户等待时间，并使用
-                                Web Worker 和 Web Audio API
-                                按需对曲子进行处理和播放。优化方面，使用了 CDN
-                                加快下载速度，并优化了 React 和浏览器渲染。
+                                为个人所做的听音识曲小游戏。通过 SSR
+                                加快首屏渲染，并实现了响应式布局，可根据屏幕长宽进行自适应放缩。音乐获取与使用采用了消费者生产者模型，实现音乐的预获取。优化方面，使用了
+                                CDN 加快下载速度，并优化了 React 和浏览器渲染。
                             </p>,
                         ],
                         [
-                            "武汉 THO 7 · 楚韵九歌 宣传页面",
-                            "2023.08 ~ 2023.09",
-                            <div className="flex gap-2">
-                                <Link href="https://whtho7.aldlss.work">
-                                    网页地址
-                                </Link>
-                                <Link href="https://github.com/Ayaloia/WHTHO7">
-                                    GitHub
-                                </Link>
-                            </div>,
+                            "东方角色识别模型程序",
+                            "",
+                            <></>,
                             <p>
-                                为 第七届武汉THONLY·楚韵九歌
-                                主题展会所作宣传页面。使用 Next.js
-                                框架开发，并采用响应式布局，页面整体风格参考了
-                                GitHub 首页。通过 CSS 和 Framer Motion
-                                库实现了各类动画和过渡效果，增强页面吸引力和交互性。CSS
-                                部分使用了原子化插件 UnoCSS
-                                进行编写，方便编写维护并能减少一定样式文件体积。不过由于项目异动导致部分素材缺失，未能发布。
+                                使用 Pytorch 搭建过多层 CNN
+                                模型，并收集数据集进行训练，以此来进行角色分类的。并通过
+                                C++ 的 Qt 编写了简单的客户端调用模型进行分类。
                             </p>,
                         ],
                         [
-                            "MiniTikTok 社交模块后端开发",
-                            "2023.01 ~ 2023.02",
-                            <Link href="https://github.com/aldlss/MiniTikTok-Social-Module">
-                                GitHub
-                            </Link>,
+                            "RT-Thread 物联网操作系统移植",
+                            "",
+                            <></>,
                             <p>
-                                为第五届字节跳动青训营后端项目实践内容，使用微服务架构。
-                                本人在其中负责了社交模块的后端开发，运用了 PgSQL
-                                存储用户私聊信息，并考虑到用户关系的复杂性，使用了图数据库
-                                Neo4j 进行管理。通过 Hertz
-                                拦截网络请求后解析数据并验证合法性，然后通过
-                                Kitex 调用相关微服务，相应微服务则通过 Gorm
-                                或相应的驱动操作数据库并返回结果，有效实现了用户关注、私聊等功能。
+                                将 RT-Thread
+                                物联网操作系统移植到了一个全新的平台上。通过使能中断并设置时钟中断实现了操作系统的时钟周期，并通过完善编写汇编函数以实现切换线程过程中包括寄存器的上下文切换。
                             </p>,
                         ],
                     ].map((project) => (
@@ -162,50 +121,26 @@ export default function App() {
                 </ul>
             </section>
             <section>
-                <h2 className="text-h2">所获奖项</h2>
+                <h2 className="text-h2">算法竞赛奖项</h2>
                 <ul className="flex flex-col gap-2">
                     {[
                         [
-                            "2022 CCF CCSP 全国赛铜奖",
-                            "2022.12",
+                            "第 34 次 CCF 计算机软件能力认证 430 分",
+                            "2024.06",
                             "",
-                            "该认证为程序设计能力认证。",
+                            "",
                         ],
                         [
-                            "第 29 次 CCF 计算机软件能力认证 315 分",
-                            "2023.03",
-                            "排名：前 2.59%。",
-                            "该认证为算法与程序设计能力认证。",
-                        ],
-                        [
-                            "蓝桥杯 第十四届 省赛一等奖",
+                            "蓝桥杯第十四届软件赛 C/C++ 程序设计大学 A 组 省赛一等奖",
                             "2023.04",
-                            "C/C++ 程序设计大学 A 组 省赛一等奖。",
-                            "该认证为算法设计能力认证。",
+                            "",
+                            "",
                         ],
                         [
-                            "团体程序设计天梯赛 个人三等奖",
+                            "团体程序设计天梯赛 个人三等奖 201 分",
                             "2023.04",
-                            "个人三等奖，201 分。",
-                            "该认证为算法设计能力认证。",
-                        ],
-                        [
-                            "第 33 次 CCF 计算机软件能力认证 430 分",
-                            "2024.03",
-                            "排名：历史前 0.34%。",
-                            "该认证为算法与程序设计能力认证。",
-                        ],
-                        [
-                            "全国大学生数学建模竞赛 省级三等奖",
-                            "2023.11",
-                            "湖北赛区 省级三等奖。",
-                            "该比赛为数学建模能力比赛，本人在其中担任编程实现的角色。",
-                        ],
-                        [
-                            "第十六届 中国大学生计算机设计大赛 省赛二等奖",
-                            "2023.06",
-                            "物联网应用大类 中南地区赛二等奖。",
-                            "该比赛考察项目设计及开发能力。",
+                            "",
+                            "",
                         ],
                     ].map((award) => (
                         <CompetitionAward
@@ -218,6 +153,38 @@ export default function App() {
                         />
                     ))}
                 </ul>
+            </section>
+            <section>
+                <h2 className="text-h2">实习经历</h2>
+                <div className="flex justify-between">
+                    <h3 className="flex items-center gap-2 text-h3 font-normal">
+                        <div className="h-8 w-8 overflow-clip">
+                            <BytedanceLogoSvg className="h-8 min-w-max" />
+                        </div>
+                        <span>字节跳动·前端开发实习生</span>
+                    </h3>
+                    <span>2023.12 ~ 2024.03</span>
+                </div>
+                <UnorderedList
+                    list={[
+                        "飞书前端开发实习生，业务方向为飞书多维表格业务侧前端的开发。",
+                        "修复安全、体验问题，完善搜索、筛选功能，扩展字段填写方式。",
+                    ]}
+                />
+                <div className="flex justify-between">
+                    <h3 className="flex items-center gap-2 text-h3 font-normal">
+                        <div className="h-8 w-8 overflow-clip">
+                            <TencentLogoIcon className="h-8 min-w-max" />
+                        </div>
+                        <span>腾讯·前端开发实习生</span>
+                    </h3>
+                    <span>2024.06 ~ </span>
+                </div>
+                <UnorderedList
+                    list={[
+                        "腾讯视频前端开发实习生，业务方向为在线视频会员业务的开发。",
+                    ]}
+                />
             </section>
         </main>
     );
