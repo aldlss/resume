@@ -3,6 +3,7 @@ import {
     GithubFillSvg,
     LinkSvg,
     MailLineSvg,
+    TencentLogoIcon,
     WhuLogoSvg,
 } from "./svg";
 import { box } from "./box";
@@ -62,7 +63,7 @@ export default function App() {
                 </div>
                 <UnorderedList
                     list={[
-                        "主修专业：计算机科学与技术。GPA: 3.759/4.0。",
+                        "主修专业：计算机科学与技术。GPA: 3.764/4.0。",
                         "科目成绩：离散数学 93/100、数据结构 93/100、计算机网络 93/100、高级语言程序设计 92/100、计算机组成与设计 90/100。",
                         "在校荣誉：乙等奖学金、三好学生、国家励志奖学金、校级社会活动积极分子等。",
                     ]}
@@ -73,11 +74,26 @@ export default function App() {
                 <div className="flex justify-between">
                     <h3 className="flex items-center gap-2 text-h3 font-normal">
                         <div className="h-8 w-8 overflow-clip">
+                            <TencentLogoIcon className="h-8 min-w-max" />
+                        </div>
+                        <span>腾讯</span>
+                    </h3>
+                    <span>2024.06 ~ 2024.09</span>
+                </div>
+                <UnorderedList
+                    list={[
+                        "腾讯视频前端开发实习生，业务方向为在线视频会员业务的开发。",
+                        "参与设计和开发了低代码平台渲染内核的重构。",
+                    ]}
+                />
+                <div className="flex justify-between">
+                    <h3 className="flex items-center gap-2 text-h3 font-normal">
+                        <div className="h-8 w-8 overflow-clip">
                             <BytedanceLogoSvg className="h-8 min-w-max" />
                         </div>
-                        <span>字节跳动·前端开发实习生</span>
+                        <span>字节跳动</span>
                     </h3>
-                    <span>2024.01 ~ 2024.03</span>
+                    <span>2023.12 ~ 2024.03</span>
                 </div>
                 <UnorderedList
                     list={[
@@ -110,27 +126,6 @@ export default function App() {
                                 Web Worker 和 Web Audio API
                                 按需对曲子进行处理和播放。优化方面，使用了 CDN
                                 加快下载速度，并优化了 React 和浏览器渲染。
-                            </p>,
-                        ],
-                        [
-                            "武汉 THO 7 · 楚韵九歌 宣传页面",
-                            "2023.08 ~ 2023.09",
-                            <div className="flex gap-2">
-                                <Link href="https://whtho7.aldlss.work">
-                                    网页地址
-                                </Link>
-                                <Link href="https://github.com/Ayaloia/WHTHO7">
-                                    GitHub
-                                </Link>
-                            </div>,
-                            <p>
-                                为 第七届武汉THONLY·楚韵九歌
-                                主题展会所作宣传页面。使用 Next.js
-                                框架开发，并采用响应式布局，页面整体风格参考了
-                                GitHub 首页。通过 CSS 和 Framer Motion
-                                库实现了各类动画和过渡效果，增强页面吸引力和交互性。CSS
-                                部分使用了原子化插件 UnoCSS
-                                进行编写，方便编写维护并能减少一定样式文件体积。不过由于项目异动导致部分素材缺失，未能发布。
                             </p>,
                         ],
                         [
@@ -172,15 +167,15 @@ export default function App() {
                             "该认证为程序设计能力认证。",
                         ],
                         [
-                            "第 29 次 CCF 计算机软件能力认证 315 分",
-                            "2023.03",
-                            "排名：前 2.59%。",
+                            "第 34 次 CCF 计算机软件能力认证 350 分",
+                            "2024.06",
+                            "排名：前 2.14%。",
                             "该认证为算法与程序设计能力认证。",
                         ],
                         [
-                            "蓝桥杯 第十四届 省赛一等奖",
-                            "2023.04",
-                            "C/C++ 程序设计大学 A 组 省赛一等奖。",
+                            "蓝桥杯 第十五届 全国总决赛三等奖",
+                            "2024.06",
+                            "Python 程序设计大学 A 组 全国总决赛一等奖。",
                             "该认证为算法设计能力认证。",
                         ],
                         [
@@ -190,22 +185,10 @@ export default function App() {
                             "该认证为算法设计能力认证。",
                         ],
                         [
-                            "第 33 次 CCF 计算机软件能力认证 430 分",
-                            "2024.03",
-                            "排名：历史前 0.34%。",
-                            "该认证为算法与程序设计能力认证。",
-                        ],
-                        [
                             "全国大学生数学建模竞赛 省级三等奖",
                             "2023.11",
                             "湖北赛区 省级三等奖。",
                             "该比赛为数学建模能力比赛，本人在其中担任编程实现的角色。",
-                        ],
-                        [
-                            "第十六届 中国大学生计算机设计大赛 省赛二等奖",
-                            "2023.06",
-                            "物联网应用大类 中南地区赛二等奖。",
-                            "该比赛考察项目设计及开发能力。",
                         ],
                     ].map((award) => (
                         <CompetitionAward
